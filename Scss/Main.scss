@@ -1,0 +1,70 @@
+@import 'config';
+@import 'buttons';
+@import 'hederFooter';
+@import 'mixins';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+}
+
+.text{
+    position: absolute;
+    width: 301px;
+    height: 296px;
+    right: 489px;
+    top: 160px;
+
+    h1{
+        @include text-setup(absolute, 300.93px, 120px, 0px, 0px, $h1FontFamily, 32px, 38px, flex, flex-end, -0.2px,$h1Color);
+    }
+
+    p{
+        @include text-setup(absolute, 300.93px, 156px, 0px, 140px, $h1FontFamily, 18px, 26px, flex, center, -0.2px,#484A4C);
+    }
+}
+
+%row{
+    position: absolute;
+    height: 200px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row-reverse;
+}
+
+.firstRow{
+    @extend row;
+    width: 1230px;
+    left: -120px;
+    top: 160px;
+}
+
+.secondRow{
+    @extend row;
+    width: 1080px;
+    left: -130px;
+    bottom: 160px;
+}
+
+img {
+    height: 200px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.appear{
+    opacity: 0%;
+}

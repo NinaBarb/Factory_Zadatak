@@ -1,0 +1,14 @@
+@mixin text-setup($position, $width, $height, $left, $top, $font-family, $font-size, $line-height, $display, $align-items, $letter-spacing, $color){
+    position: $position;
+    width: $width;
+    height: $height;
+    left: $left;
+    top: $top;
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    display: $display;
+    align-items: $align-items;
+    letter-spacing: $letter-spacing;
+    color: $color;
+}

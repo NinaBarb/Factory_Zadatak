@@ -1,0 +1,233 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+}
+
+header {
+  position: absolute;
+  width: 941px;
+  height: 100px;
+  right: 489px;
+  top: 0px;
+}
+
+header .smallBox {
+  position: absolute;
+  width: 301px;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+  background: #DDDDDD;
+  border-radius: 0px 0px 5px 5px;
+}
+
+header .bigBox {
+  position: absolute;
+  width: 621px;
+  height: 100px;
+  left: 320px;
+  top: 0px;
+  background: #DDDDDD;
+  border-radius: 0px 0px 5px 5px;
+}
+
+header h2 {
+  position: absolute;
+  width: 245px;
+  height: 18px;
+  left: 400px;
+  top: 39px;
+  font-family: 'HelveticaNeue';
+  font-size: 15px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #FFFFFF;
+}
+
+footer {
+  position: absolute;
+  width: 941px;
+  height: 100px;
+  right: 489px;
+  bottom: 0px;
+  background: #DDDDDD;
+  border-radius: 0px 0px 5px 5px;
+}
+
+footer h2 {
+  position: absolute;
+  width: 245px;
+  height: 18px;
+  left: 81px;
+  top: 42px;
+  font-family: 'HelveticaNeue';
+  font-size: 15px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #FFFFFF;
+}
+
+.text {
+  position: absolute;
+  width: 301px;
+  height: 296px;
+  right: 489px;
+  top: 160px;
+}
+
+.text h1 {
+  position: absolute;
+  width: 300.93px;
+  height: 120px;
+  left: 0px;
+  top: 0px;
+  font-family: 'SourceSansPro';
+  font-size: 32px;
+  line-height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  letter-spacing: -0.2px;
+  color: #134880;
+}
+
+.text p {
+  position: absolute;
+  width: 300.93px;
+  height: 156px;
+  left: 0px;
+  top: 140px;
+  font-family: 'SourceSansPro';
+  font-size: 18px;
+  line-height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.2px;
+  color: #484A4C;
+}
+
+.firstRow {
+  position: absolute;
+  width: 1230px;
+  height: 200px;
+  left: -120px;
+  top: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.secondRow {
+  position: absolute;
+  width: 1080px;
+  height: 200px;
+  left: -130px;
+  bottom: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+img {
+  height: 200px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+#btnRight {
+  background: url("../assets/arrow-gray-right.png") no-repeat;
+  background-size: 20%;
+  background-position: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#btnLeft {
+  background: url("../assets/arrow-gray-left.png") no-repeat;
+  background-size: 20%;
+  background-position: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#btnRight:hover {
+  background: url("../assets/arrow-blue-right.png") no-repeat;
+  background-size: 20%;
+  background-position: center;
+}
+
+#btnLeft:hover {
+  background: url("../assets/arrow-blue-left.png") no-repeat;
+  background-size: 20%;
+  background-position: center;
+}
+
+button {
+  border-color: #dddddd;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+  border: 1px solid #DDDDDD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+button:hover {
+  border-color: #134880;
+}
+
+.appear {
+  opacity: 0%;
+}
+
+.btns {
+  position: absolute;
+  width: 60px;
+  height: 130px;
+  right: 810px;
+  bottom: 230px;
+}
+/*# sourceMappingURL=Main.css.map */

@@ -1,0 +1,46 @@
+%btn{
+    background-size: $backgroundSize;
+    background-position: $backgroundPosition;
+    transition: $imgAnimationConfig;
+}
+
+#btnRight {
+    background: url("../assets/arrow-gray-right.png") no-repeat;
+    @extend %btn;
+
+    &:hover{
+        background: url("../assets/arrow-blue-right.png") no-repeat;
+    }
+  }
+  
+  #btnLeft {
+    background: url("../assets/arrow-gray-left.png") no-repeat;
+    @extend %btn;
+
+    &:hover{
+        background: url("../assets/arrow-blue-left.png") no-repeat;
+    }
+  }
+
+  .btns{
+    position: absolute;
+    width: 60px;
+    height: 130px;
+    right: 810px;
+    bottom: 230px;
+  }
+
+  button {
+    border-color: $header-footer-bgColor;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+    border: 1px solid $lightGray;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    &:hover{
+        border-color: $h1Color;
+    }
+  }

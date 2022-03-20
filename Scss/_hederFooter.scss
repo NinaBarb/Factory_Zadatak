@@ -1,0 +1,39 @@
+%headFoot{
+    position: absolute;
+    width: 941px;
+    height: 100px;
+    background: $lightGray;
+    border-radius: 0px 0px 5px 5px;
+}
+
+header{
+    @extend %headFoot;
+    right: 489px;
+    top: 0px;
+
+    .smallBox{
+        width: 301px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .bigBox{
+        width: 621px;
+        left: 320px;
+        top: 0px;
+    }
+
+    h2{
+        @include text-setup(absolute, 245px, 18px, 400px, 39px, $h2FontFamily, 15px, 18px, flex, flex-end, 0px,$header-footer-textColor);
+    }
+}
+
+footer{
+    @extend %headFoot;
+    right: 489px;
+    bottom: 0px;
+
+    h2{
+        @include text-setup(absolute, 245px, 18px, 81px, 42px, $h2FontFamily, 15px, 18px, flex, flex-end, 0px,$header-footer-textColor);
+    }
+}

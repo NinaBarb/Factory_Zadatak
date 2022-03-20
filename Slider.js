@@ -1,43 +1,41 @@
-$("#btnRight").click(slideRight)
-$("#btnLeft").click(slideLeft)
-
-var rightImg = $('.myCarousel').last()
+$(function(){
+    $("#btnRight").click(slideRight)
+    $("#btnLeft").click(slideLeft)
+})
 
 function slideRight(){
-    findRightImg()
-    $(".myCarousel").prepend("<img src=' "+ $(".myCarousel img").last().attr('src') +" ' />")
-    $(".myCarousel img").last().remove()
-    $(".myCarousel img").each(function(index){
-        $(this).animate({ right: $(rightImg).width() + $(".myCarousel").offset().left}, index*500+500);
+    $(':button').attr('disabled', true);
+
+    $(".firstRow").append("<img src=' "+ $(".firstRow img").first().attr('src') +" ' />")
+
+    $(".secondRow").append("<img src=' "+ $(".secondRow img").first().attr('src') +" ' />")
+
+    $(".firstRow img").first().animate({marginRight: -$(".firstRow img").first().width()}, 500, function(){
+        $(".firstRow img").first().remove()
+        
     });
-    
-    isInViewport()
+
+    $(".secondRow img").first().animate({marginRight: -$(".secondRow img").first().width()}, 500, function(){
+        $(':button').attr('disabled', false);
+        $(".secondRow img").first().remove()
+    });
 }
 
 function slideLeft(){
-    findRightImg()
-    $(".myCarousel").append("<img src=' "+ $(".myCarousel img").first().attr('src') +" ' />")
-    $($(".myCarousel img").get().reverse()).each(function(index){
-        $(this).animate({ left: -$(rightImg).width() - $(".myCarousel").offset().left}, index*500+500);
-    });
-    $(".myCarousel img").first().remove()
-    isInViewport()
-}
-
-function findRightImg(){
-      $(".myCarousel img").each(function(){
-        if($(this).offset().left>$(rightImg).offset().left){
-            rightImg=this
-        }
-    });
-}
-
-function isInViewport() {
-    const contaier = $(".myCarousel").offset().top + $(".myCarousel").height()
+    $(':button').attr('disabled', true);
     
-    $(".myCarousel img").each(function(){
-        if(($(this).offset().top + $(this).height())>contaier){
-            $(this).remove()
-        }
+    $(".firstRow").prepend("<img class=\"appear\" src=' "+ $(".firstRow img").last().attr('src') +" ' />")
+    $(".firstRow img").first().animate({marginRight: $(".firstRow img").last().width()}, 500, function(){
+        $(this).css("margin-right", "5px")
+        $(this).animate({opacity: "100%"}, 500)
+        $(".firstRow img").last().remove()
+    });
+
+    $(".secondRow").prepend("<img class=\"appear\" src=' "+ $(".secondRow img").last().attr('src') +" ' />")
+    $(".secondRow img").first().animate({marginRight: $(".secondRow img").last().width()}, 500, function(){
+        $(this).css("margin-right", "5px")
+        $(this).animate({opacity: "100%"}, 500)
+        $(".secondRow img").last().remove()
+        $(':button').attr('disabled', false);
     });
 }
